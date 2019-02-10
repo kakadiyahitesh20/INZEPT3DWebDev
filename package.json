@@ -37,6 +37,6 @@
 	},
 	"scripts": {
 		"start": "node index.js",
-		"test": "NODE_ENV=test node node_modules/lab/bin/lab -v -L -C -D -c -t 85"
+		"test": "node index.js --env=test"
 	}
 }

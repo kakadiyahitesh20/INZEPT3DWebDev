@@ -1,6 +1,6 @@
 "use strict";
 
 module.exports = {
-	host:'localhost',
-	port: 8098
+    host: '0.0.0.0',
+    port: 3000
 };

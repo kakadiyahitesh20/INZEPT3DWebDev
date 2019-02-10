@@ -53,14 +53,6 @@ let plugins = [
       }
     }
   },
-    {
-    register: cons,
-    options: {
-    origins: ['*'],
-    methods: ['POST,GET,PUT,OPTIONS'],
-    headers: ['Accept', 'Content-Type', 'Authorization','pragma','cache-control','if-modified-since','api-key']
-}
-},
 ];
 
 

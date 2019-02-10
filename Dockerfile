@@ -15,5 +15,5 @@ RUN npm install
 # Bundle app source
 COPY . /Inzept3WebDevBack
 
-EXPOSE 8098
+EXPOSE 3000
 CMD [ "npm", "start" ]
