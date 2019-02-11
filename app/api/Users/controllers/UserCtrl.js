@@ -53,7 +53,7 @@ module.exports = function (server, options, services) {
             console.log("UserCtrl --> createNewUser");
             UserService.createNewUser(request.payload)
                 .then(createUser => {
-                sendRegisterEmail(createUser);
+                //sendRegisterEmail(createUser);
                 reply(createUser);
              })
                 .catch(errorHandling(reply));

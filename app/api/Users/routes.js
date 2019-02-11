@@ -13,9 +13,10 @@ module.exports = function (server, options, controllers, components) {
 
      var corsHeaders = {
         origin: ["*"],
-        headers: ["Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,cache-control,pragma,'X-Auth-Token', 'X-CSRF-TOKEN'"],
+        headers: ['Accept', 'Content-Type', 'Authorization','pragma','cache-control','if-modified-since','api-key'],
         credentials: true
     };
+
 	return [
 		{
 			method: "POST",
@@ -25,7 +26,8 @@ module.exports = function (server, options, controllers, components) {
 				handler: UserCtrl.createNewUser,
 				description: "Create a new User in the DB",
 				tags: ["api"],
-				validate: CreateUser
+				validate: CreateUser,
+                cors : corsHeaders
 			}
     	},
         {
