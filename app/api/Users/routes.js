@@ -52,5 +52,16 @@ module.exports = function (server, options, controllers, components) {
                     validate: UpdateUserInfo
                 }
         },
+        {
+            method: "GET",
+            path: "/getUsersList",
+            config:
+                {
+                    handler: UserCtrl.getUsersList,
+                    description: "Get users list from DB",
+                    tags: ["api"],
+
+                }
+        },
 	];
 };

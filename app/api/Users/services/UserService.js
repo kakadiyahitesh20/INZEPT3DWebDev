@@ -53,13 +53,25 @@ module.exports = function (server, options, components) {
         return Users.findOneAndUpdate({email:updateInfo.email}, {status : 'Active'});
     }
 
+    /*  ---------------------------------------------------------------
+               Get User List
+               Params: None
+               Return: User list in JSON
+               Effects: None;
+           ---------------------------------------------------------------*/
+
+    function getUserList() {
+        console.log("Start getUserList ---->");
+        return Users.find();
+    }
 
 
 
     return {
         createNewUser,
 		checkUserLogin,
-        updateUserInfo
+        updateUserInfo,
+        getUserList
 	};
 
 };

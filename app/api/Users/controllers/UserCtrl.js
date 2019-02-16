@@ -1,7 +1,6 @@
 "use strict";
 const nodemailer = require("nodemailer");
 const SGmail = require('@sendgrid/mail')
-SGmail.setApiKey('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') // Input Api key or add to
 
 
 
@@ -92,6 +91,13 @@ module.exports = function (server, options, services) {
                 .then(updatedUser => {
                 reply(updatedUser);
         })
+        },
+        getUsersList: function (request, reply) {
+            console.log("UserCtrl --> getUsersList");
+            // Call the user service to get a specific userlist
+            UserService.getUserList()
+                .then(reply)
+                .catch(errorHandling(reply));
         },
 
     };
